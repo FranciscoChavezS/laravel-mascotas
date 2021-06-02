@@ -33,8 +33,7 @@
                       </div>
                     </p>
                     <div class="card-description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officia corporis molestiae aliquid provident
-                      placeat.
+                     
                     </div>
                   </div>
                   <div class="card-footer">

@@ -10,6 +10,14 @@ use Spatie\Permission\Models\Permission;
 
 class RoleController extends Controller
 {
+    //proteger rutas con middleware por medio del cosntructor
+    public function __construct()
+    {
+        $this->middleware('can:roles.index')->only('index'); //especificamos la ruta para para los permisos que tiene
+        $this->middleware('can:roles.create')->only('create', 'store');
+        $this->middleware('can:roles.edit')->only('edit', 'update', 'show'); //solo los autorizados con este permiso podran acceder a estas vistas
+        $this->middleware('can:roles.destroy')->only('destroy');
+    }
     /**
      * Display a listing of the resource.
      *

@@ -11,9 +11,18 @@ use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
+    //proteger rutas con middleware por medio del cosntructor
+    public function __construct()
+    {
+        $this->middleware('can:users.index')->only('index'); //especificamos la ruta para para los permisos que tiene
+        $this->middleware('can:users.create')->only('create', 'store');
+        $this->middleware('can:users.edit')->only('edit', 'update', 'show'); //solo los autorizados con este permiso podran acceder a estas vistas
+        $this->middleware('can:users.destroy')->only('destroy');
+
+    }
     public function index()
     {
-        $users = User::paginate(5);
+        $users = User::paginate(5); //Cada 5 registros de usuarios se cambia de página
         return view('users.index', compact('users'));
     }
 

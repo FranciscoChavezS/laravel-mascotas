@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Http\Requests\PostCreateRequest;
 use App\Http\Requests\PostEditRequest;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class PostController extends Controller
 {
@@ -39,6 +40,8 @@ class PostController extends Controller
     public function store(PostCreateRequest $request)
     {
         $post = new Post();
+        
+        $post->user_id = auth()->user()->id;
 
         $post->title = $request->title;
         $post->fecha = $request->fecha;
@@ -80,6 +83,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
+        //Agregar policies
+        $this->authorize('author', $post);
+
         return view('posts.edit', compact('post'));
     }
 
@@ -94,7 +100,8 @@ class PostController extends Controller
     {
         //$post->update($request->all());
         //$post = Post::find($id);
-
+        $this->authorize('author', $post);
+        
         $post->title = $request->title;
         $post->fecha = $request->fecha;
         $post->telefono = $request->telefono;

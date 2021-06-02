@@ -9,6 +9,14 @@ use Spatie\Permission\Models\Permission;
 
 class PermissionController extends Controller
 {
+    //proteger rutas con middleware por medio del cosntructor
+    public function __construct()
+    {
+        $this->middleware('can:permissions.index')->only('index'); //especificamos la ruta para para los permisos que tiene
+        $this->middleware('can:permissions.create')->only('create', 'store');
+        $this->middleware('can:permissions.edit')->only('edit', 'update', 'show'); //solo los autorizados con este permiso podran acceder a estas vistas
+        $this->middleware('can:permissions.destroy')->only('destroy');
+    }
     /**
      * Display a listing of the resource.
      *
