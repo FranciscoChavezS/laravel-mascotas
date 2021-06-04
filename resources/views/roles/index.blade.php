@@ -24,7 +24,6 @@
                   <th> Guard </th>
                   <th> Fecha de creación </th>
                   <th> Permisos </th>
-                  <th> Rol </th>
                   <th class="text-right"> Acciones </th>
                 </thead>
                 <tbody>
@@ -38,7 +37,7 @@
                       @forelse ($role->permissions as $permission)
                           <span class="badge badge-info">{{ $permission->name }}</span>
                       @empty
-                          <span class="badge badge-danger">No permission added</span>
+                          <span class="badge badge-danger">Permisos no añadidos</span>
                       @endforelse
                     </td>
                     <td class="td-actions text-right">

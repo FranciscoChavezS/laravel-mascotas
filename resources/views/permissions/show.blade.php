@@ -32,7 +32,8 @@
                   </div>
                   <div class="card-footer">
                     <div class="button-container">
-                      <button class="btn btn-sm btn-primary">Editar</button>
+                      <a href="{{ route('permissions.index') }}" class="btn btn-sm btn-success mr-3"> Volver </a>
+                      <a href="{{ route('permissions.edit', $permission->id) }}" class="btn btn-sm btn-primary">Editar</a>
                     </div>
                   </div>
                 </div>

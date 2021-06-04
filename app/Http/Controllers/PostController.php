@@ -10,6 +10,7 @@ use App\Models\User;
 
 class PostController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -72,6 +73,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        
         return view('posts.show', compact('post'));
     }
 
@@ -83,7 +85,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //Agregar policies
+        //Agregar policies que solo se puedan editar los posts que de tu propiedad y no los de otros usuarios
         $this->authorize('author', $post);
 
         return view('posts.edit', compact('post'));
@@ -129,6 +131,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+        //Agregar policies para que solo se puedan eliminar los posts que de tu propiedad y no los de otros usuarios
+        $this->authorize('author', $post);
+
         $post->delete();
 
         return redirect()->route('posts.index')->with('mensajePost','Registro eliminado correctamente');

@@ -38,10 +38,10 @@
                           <!-- 
                           {{ $post->title }} <br>
                           {{ $post->foto }} <br> -->
-                          {{ $post->fecha }} <br>
-                          {{ $post->telefono }} <br>
-                          {{ $post->raza }} <br>
-                          {{ $post->created_at }}
+                          Fecha: {{ $post->fecha }} <br>
+                          Tel: {{ $post->telefono }} <br>
+                          Raza: {{ $post->raza }} <br>
+                          Creación de post: {{ $post->created_at }}
                         </p>
                       </div>
                     </p>

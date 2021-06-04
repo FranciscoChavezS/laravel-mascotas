@@ -14,6 +14,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+        //Creamos un registro user para asignarle un rol de administrador
         User::create([
             'name' => 'Francisco',
             'username' => 'admin',

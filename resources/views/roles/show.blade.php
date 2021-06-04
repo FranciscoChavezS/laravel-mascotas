@@ -29,7 +29,7 @@
                           <h5 class="title mt-3">Rol: {{ $role->name }}</h5>
                         </a>
                         <p class="description">
-                          {{ _('Ceo/Co-Founder') }} <br>
+                          {{ $role->name }} <br>
                           {{ $role->guard_name }} <br>
                           {{ $role->created_at }}
                         </p>
@@ -45,7 +45,8 @@
                   </div>
                   <div class="card-footer">
                     <div class="button-container">
-                      <button type="submit" class="btn btn-sm btn-primary">Editar</button>
+                      <a href="{{ route('roles.index') }}" class="btn btn-sm btn-success mr-3"> Volver </a>
+                      <a href="{{ route('roles.edit', $role->id) }}" class="btn btn-sm btn-primary">Editar</a>
                     </div>
                   </div>
                 </div>
