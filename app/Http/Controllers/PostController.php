@@ -40,6 +40,7 @@ class PostController extends Controller
      */
     public function store(PostCreateRequest $request)
     {
+        //Método para agregar registros
         $post = new Post();
         
         $post->user_id = auth()->user()->id;
@@ -53,9 +54,9 @@ class PostController extends Controller
         //Guardar ruta de imagen en BD 
         if($request->hasFile('foto')){
             $file = $request->file('foto');
-            $destinationPath = 'images/featureds/';
+            $destinationPath = 'images/featureds/'; //asignamos la carpeta 
             $filename = time().'-'.$file->getClientOriginalName(); 
-            $uploadSuccess = $request->file('foto')->move($destinationPath, $filename);
+            $uploadSuccess = $request->file('foto')->move($destinationPath, $filename); //la imagen cargada la movemos a la carpeta y guardamos la url en la DB
             $post->foto = $destinationPath . $filename;
          }
         
