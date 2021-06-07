@@ -7,6 +7,7 @@
         <div class="col-md-12">
           <div class="row">
             <div class="col-md-12">
+            <!--Mensaje de exíto-->
              @if (session('mensajePermiso'))
                     <div class="alert alert-success" role="success">
                       {{ session('mensajePermiso') }}
@@ -56,7 +57,7 @@
                         </tr>
                         @empty
                         <tr>
-                          <td colspan="2">Sin registros.</td>
+                          <td colspan="2">Sin registros.</td> <!--Si la tabla permisos está vacía-->
                         </tr>
                         @endforelse
                       </tbody>
@@ -64,7 +65,7 @@
                   </div>
                 </div>
                 <div class="card-footer mr-auto">
-                  {{ $permissions->links() }}
+                  {{ $permissions->links() }} <!--Link paginación-->
                 </div>
               </div>
             </div>

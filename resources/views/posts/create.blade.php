@@ -11,7 +11,7 @@
             <!--Header-->
             <div class="card-header card-header-primary">
               <h4 class="card-title">Post</h4>
-              <p class="card-category">Ingresar datos del nuevo post</p>
+              <p class="card-category">Resgistra a tu mascota extraviada</p>
             </div>
             <!--End header-->
             <!--Body-->
@@ -31,7 +31,7 @@
                 <label for="foto" class="col-sm-2 col-form-label">Foto</label>
                 <div class="col-sm-7">
                   <input type="file" class="form-control" name="foto"
-                    autocomplete="off">
+                    autocomplete="off" accept="image/*"> <!--Validamos que solo acepte archivos tipo imagen png,jpg,jpeg,etc-->
                     <!--Validaciones-->
                     @if($errors->has('foto'))
                       <span class="error text-danger" for="input-name">{{ $errors->first('foto') }}</span>

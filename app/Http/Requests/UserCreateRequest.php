@@ -21,10 +21,10 @@ class UserCreateRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules() //validación en el servidor
     {
         return [
-            'name' => 'required|min:3|max:5',
+            'name' => 'required|min:3|max:5', 
             'username' => 'required|unique:users',
             'email' => 'required|email|unique:users',
             'password' => 'required'

@@ -20,7 +20,7 @@
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
           <i><img style="width:25px" src="{{ asset('img/apple-icon.png') }}"></i>
-          <p>{{ __('Laravel Examples') }}
+          <p>{{ __('Registros Pet') }}
             <b class="caret"></b>
           </p>
         </a>
@@ -29,13 +29,19 @@
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
               <a class="nav-link" href="#">
                 <span class="sidebar-mini"> UP </span>
-                <span class="sidebar-normal">{{ __('User profile') }} </span>
+                <span class="sidebar-normal">{{ __('Perfil') }} </span>
               </a>
             </li>
             <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
               <a class="nav-link" href="#">
                 <span class="sidebar-mini"> UM </span>
-                <span class="sidebar-normal"> {{ __('User Management') }} </span>
+                <span class="sidebar-normal"> {{ __('Configuración') }} </span>
+              </a>
+            </li>
+            <li class="nav-item{{ $activePage == 'posts' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('posts.index') }}">
+                <i class="material-icons">library_books</i>
+                <p>{{ __('Post') }}</p>
               </a>
             </li>
           </ul>
@@ -50,12 +56,7 @@
         </a>
       </li>
       @endcan
-      <li class="nav-item{{ $activePage == 'posts' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('posts.index') }}">
-          <i class="material-icons">library_books</i>
-            <p>{{ __('Post') }}</p>
-        </a>
-      </li>
+      
       <!--Asignar permisos -->
       @can('permissions.index')
       <li class="nav-item{{ $activePage == 'permissions' ? ' active' : '' }}">

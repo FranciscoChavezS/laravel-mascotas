@@ -55,7 +55,7 @@ class PostController extends Controller
         if($request->hasFile('foto')){
             $file = $request->file('foto');
             $destinationPath = 'images/featureds/'; //asignamos la carpeta 
-            $filename = time().'-'.$file->getClientOriginalName(); 
+            $filename = time().'-'.$file->getClientOriginalName(); //recuperar el nombre original del archivo
             $uploadSuccess = $request->file('foto')->move($destinationPath, $filename); //la imagen cargada la movemos a la carpeta y guardamos la url en la DB
             $post->foto = $destinationPath . $filename;
          }
@@ -103,6 +103,8 @@ class PostController extends Controller
     {
         //$post->update($request->all());
         //$post = Post::find($id);
+
+        //Agregar Policy
         $this->authorize('author', $post);
         
         $post->title = $request->title;
@@ -111,6 +113,7 @@ class PostController extends Controller
         $post->raza = $request->raza;
         $post->comentario = $request->comentario;
         
+        //Actualizar foto
         if($request->hasFile('foto')){
             $file = $request->file('foto');
             $destinationPath = 'images/featureds/'; //ubicamos la carpeta a guardar las imagenes
@@ -132,9 +135,10 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //Agregar policies para que solo se puedan eliminar los posts que de tu propiedad y no los de otros usuarios
+        /*Agregar policies para que solo se puedan eliminar los post que de tu propiedad 
+        o con el permiso necesario*/
         $this->authorize('author', $post);
-
+        
         $post->delete();
 
         return redirect()->route('posts.index')->with('mensajePost','Registro eliminado correctamente');

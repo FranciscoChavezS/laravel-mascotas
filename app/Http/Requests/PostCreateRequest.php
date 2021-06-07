@@ -21,7 +21,7 @@ class PostCreateRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules() //validación en el servidor
     {
         return [
             'title' => 'required',
@@ -29,7 +29,8 @@ class PostCreateRequest extends FormRequest
             'fecha' => 'required',
             'telefono' => 'required',
             'raza' => 'required',
-            'comentario' => 'required'
+            'comentario' => 'required',
+            'file' => 'image'
         ];
     }
     public function messages()

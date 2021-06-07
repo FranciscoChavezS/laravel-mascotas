@@ -21,7 +21,7 @@ class PostEditRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules() //validación en el servidor
     {
         return [
             'title' => 'required',
