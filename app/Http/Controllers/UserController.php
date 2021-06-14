@@ -34,6 +34,7 @@ class UserController extends Controller
 
     public function store(UserCreateRequest $request)
     {
+        
         //Validación de usuario 
         // $request->validate([
         //     'name' => 'required|min:3|max:5',

@@ -63,7 +63,7 @@ class PostController extends Controller
          $post->save();
         //Post::create($request->all());
 
-        return redirect()->route('posts.index')->with('mensajePost','Registro creado correctamente');;
+        return redirect()->route('posts.index')->with('mensajePost','Registro creado correctamente');
     }
 
     /**

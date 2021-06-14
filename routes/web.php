@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //proteger lar páginas que no puedan acceder al menú sin log in con middleware auth
@@ -29,4 +31,5 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::resource('permissions', App\Http\Controllers\PermissionController::class);
     Route::resource('roles', App\Http\Controllers\RoleController::class);
+    
 });
