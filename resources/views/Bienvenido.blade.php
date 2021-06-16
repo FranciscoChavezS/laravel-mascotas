@@ -54,8 +54,9 @@
        
     </header>
 
+    <h2>Objetivo</h2>
     <section class="Partes" id="seccion1">
-        <h2>Objetivo</h2>
+        
         <div class="Division">
             <img src="{{ asset('img/WOF.jpg')}}" alt="">
             <p>Nuestro objetivo principal es el ayudar de una 
@@ -68,8 +69,9 @@
         </div>
     </section>
 
+    <h2>Visión</h2>
     <section class="Partes" id="seccion2">
-        <h2>Visión</h2>
+        
         <div class="Division">
             <p>Nuestra visión, es crear una comunidad de personas
             con mismo intereses respecto al cuidado de las mascotas
