@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
             $table->string('telefono');
             $table->string('raza');
             $table->text('comentario');
+            $table->softDeletes();
             $table->foreignId('user_id')->constrained(); //llave foranea
             $table->timestamps();
         });
