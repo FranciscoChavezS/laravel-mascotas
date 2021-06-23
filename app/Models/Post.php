@@ -11,7 +11,12 @@ class Post extends Model
     use HasFactory;
     use SoftDeLetes;
 
-    //protected $fillable = ['Posts'];
-    protected $table = 'posts';
-    public $timestamps = false;
+    protected $fillable = ['title','foto','fecha','telefono','raza','comentario','user_id',];
+    //protected $table = 'posts';
+    //public $timestamps = false;
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
