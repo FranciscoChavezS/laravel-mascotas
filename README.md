@@ -1,5 +1,6 @@
 # laravel-mascotas
 Nombre del proyecto: LOSTPET
+
 Descripción del objetivo del proyecto: Nuestro objetivo principal es el ayudar de una forma proactiva y participativa a todas las comunidades en un problema social muy usual, 
 el cual es la desaparición y la busqueda de mascotas extraviadas.
 
