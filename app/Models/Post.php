@@ -11,5 +11,7 @@ class Post extends Model
     use HasFactory;
     use SoftDeLetes;
 
-    protected $fillable = ['title'];
+    //protected $fillable = ['Posts'];
+    protected $table = 'posts';
+    public $timestamps = false;
 }
