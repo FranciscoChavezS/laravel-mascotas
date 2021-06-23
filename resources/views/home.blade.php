@@ -32,6 +32,7 @@
           </div>
           @endif
       @endforeach
+        </div>
         {{ $posts->links() }}
     </div>
   </div>

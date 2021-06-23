@@ -16,10 +16,10 @@ class UserSeeder extends Seeder
     {
         //Creamos un registro user para asignarle un rol de administrador
         User::create([
-            'name' => 'Francisco',
+            'name' => 'admin',
             'username' => 'admin',
             'email' => 'admin@admin.com',
-            'password' => bcrypt('gringochivas123')
+            'password' => bcrypt('administrador')
         ])->assignRole('Admin');
 
         //User::factory(9)->create();

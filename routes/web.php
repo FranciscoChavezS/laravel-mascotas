@@ -22,6 +22,8 @@ Route::get('/', function () {
 //Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
+
 //proteger lar páginas que no puedan acceder al menú sin log in con middleware auth
 Route::group(['middleware' => 'auth'], function() { 
     
