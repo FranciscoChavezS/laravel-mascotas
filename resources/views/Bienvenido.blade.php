@@ -21,7 +21,7 @@
     @if (Route::has('login'))
             <div class="Separacion">
                 @auth
-                    <a class="Cuadrados" href="{{ url('/dashboard') }}">Perfil</a>
+                    <a class="Cuadrados" href="{{ url('/home') }}">Perfil</a>
                 @else
                     <a class="Cuadrados" href="{{ route('login') }}">LOG IN   </a>
 
