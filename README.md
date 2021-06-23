@@ -13,6 +13,6 @@ el cual es la desaparición y la busqueda de mascotas extraviadas.
 - Copiar el archivo __.env.example__ y cambiarle el nombre por __.env__
 - Dentro del proyecto ejecutamos el comando __composer install__
 - Ejecutar el comando __php artisan key:generate__
-- Ejecutar el comando __php artisan migrate --seed
+- Ejecutar el comando __php artisan migrate --seed__
 - Ejecutar el comando __npm install__
 - Ejecutar el comando __npm run dev__
