@@ -9,7 +9,7 @@ el cual es la desaparición y la busqueda de mascotas extraviadas.
 
 ## Intalación con Laravel
 - Clonar el repositorio de github con: git clone + url del proyecto
-- Copiar el archivo .env.example y cambiarle el nombre por .env
+- Copiar el archivo __.env.example__ y cambiarle el nombre por __.env__
 - Dentro del proyecto ejecutamos el comando __composer install__
 - Ejecutar el comando __php artisan key:generate__
 - Ejecutar el comando __php artisan migrate --seed
