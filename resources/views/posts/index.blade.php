@@ -18,8 +18,12 @@
           </div>
           <div class="card-body">
             <div class="row">
-              <div class="col-12 text-right">
+              <div class="col-10 text-right">
                 <a href="{{ route('posts.create') }}" class="btn btn-sm btn-facebook">Añadir post</a>
+              </div>
+              <div class="row">
+              <div class="col-12 text-right">
+                <a href="{{ route('descargarPDF') }}" class="btn btn-sm btn-warning">Descargar PDF</a>
               </div>
             </div>
             <div class="table-responsive">

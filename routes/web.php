@@ -23,6 +23,7 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
+Route::get('/pdf',[App\Http\Controllers\PDFController::class, 'PDF'])->name('descargarPDF');
 
 //proteger lar páginas que no puedan acceder al menú sin log in con middleware auth
 Route::group(['middleware' => 'auth'], function() { 
