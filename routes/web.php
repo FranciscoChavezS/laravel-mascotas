@@ -24,6 +24,7 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/pdf',[App\Http\Controllers\PDFController::class, 'PDF'])->name('descargarPDF');
+Route::get('/paypal/pay',[App\Http\Controllers\PaymentController::class, 'index'])->name('pay');
 
 //proteger lar páginas que no puedan acceder al menú sin log in con middleware auth
 Route::group(['middleware' => 'auth'], function() { 

@@ -75,10 +75,10 @@
         </a>
         @endcan
       </li>
-      <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
-        <a class="nav-link" href="#">
-          <i class="material-icons">notifications</i>
-          <p>{{ __('Notifications') }}</p>
+      <li class="nav-item{{ $activePage == 'donar' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ url('/paypal/pay') }}">
+          <i class="material-icons">attach_money</i>
+          <p>{{ __('Donar') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'language' ? ' active' : '' }}">
