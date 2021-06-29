@@ -1,6 +1,14 @@
 @extends('layouts.main', ['activePage' => 'dashboard', 'titlePage' => __('¡Ayudame a localizarlo!')])
 
 @section('content')
+    <style >
+        body {
+            background-image: url('../img/Perrito1.jpg');
+            background-repeat: no-repeat;
+             background-size: cover;
+            background-position: center center;
+          }
+      </style>
     <div class="content">
       <div class="col-md-12">
       <div class="container-fluid">

@@ -1,6 +1,15 @@
 @extends('layouts.main', ['activePage' => 'profile', 'titlePage' => __('Perfil')])
 
 @section('content')
+<style >
+     body {
+        background-image: url('../img/Perro-Recortado.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+       }
+  </style>
 <div class="content">
   <div class="container-fluid">
     <div class="row">

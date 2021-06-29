@@ -1,6 +1,15 @@
 @extends('layouts.main', ['activePage' => 'archivos', 'titlePage' => 'Archivos:Carga/Descarga'])
 
 @section('content')
+<style >
+     body {
+        background-image: url('../img/Mascotas.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+       }
+  </style>
 <div class="content">
   <div class="container-fluid">
     <div class="row">
