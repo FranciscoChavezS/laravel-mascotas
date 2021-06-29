@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ArchivoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,6 @@ Route::get('/', function () {
 //Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
 Route::get('/pdf',[App\Http\Controllers\PDFController::class, 'PDF'])->name('descargarPDF');
 
 //proteger lar páginas que no puedan acceder al menú sin log in con middleware auth
@@ -34,5 +34,8 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::resource('permissions', App\Http\Controllers\PermissionController::class);
     Route::resource('roles', App\Http\Controllers\RoleController::class);
+    Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
     
+    Route::resource('archivo', App\Http\Controllers\ArchivoController::class)->except('edit','update');
+    Route::get('archivo/descargar/{archivo}', [App\Http\Controllers\ArchivoController::class, 'descargar'])->name('archivo.descargar');
 });

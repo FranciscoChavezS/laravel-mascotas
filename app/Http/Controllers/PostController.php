@@ -7,6 +7,8 @@ use App\Http\Requests\PostCreateRequest;
 use App\Http\Requests\PostEditRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
+use FFI;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -85,7 +87,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //Agregar policies que solo se puedan editar los posts que de tu propiedad y no los de otros usuarios
+        //Agregar Policy
         $this->authorize('author', $post);
 
         return view('posts.edit', compact('post'));

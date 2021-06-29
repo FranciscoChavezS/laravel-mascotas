@@ -32,10 +32,10 @@
                 <span class="sidebar-normal">{{ __('Perfil') }} </span>
               </a>
             </li>
-            <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
-              <a class="nav-link" href="#">
+            <li class="nav-item{{ $activePage == 'archivos' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('archivo.index') }}">
                 <span class="sidebar-mini"> UM </span>
-                <span class="sidebar-normal"> {{ __('Configuración') }} </span>
+                <span class="sidebar-normal"> {{ __('Carga/Descarga') }} </span>
               </a>
             </li>
             <li class="nav-item{{ $activePage == 'posts' ? ' active' : '' }}">

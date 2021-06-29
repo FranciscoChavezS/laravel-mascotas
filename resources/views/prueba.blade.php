@@ -13,15 +13,13 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Foto</th>
                     <th scope="col">Ultimo visto</th>
                     <th scope="col">Telefono</th>
                     <th scope="col">Raza</th>
                     <th scope="col">Comentario</th>
-                    <th scope="col">Fecha de comentario</th>
-                    <th scope="col">Usuario</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,8 +34,6 @@
                     <td>{{ $post->telefono }}</td>
                     <td>{{ $post->raza }}</td>
                     <td>{{ $post->comentario }}</td>
-                    <td>{{ $post->created_at->toFormattedDateString() }}</td>
-                    <td>{{ $post->user->name }}</td>
                 </tr>
                 @endforeach
             </tbody>

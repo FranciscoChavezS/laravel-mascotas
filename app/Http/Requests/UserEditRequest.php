@@ -33,7 +33,7 @@ class UserEditRequest extends FormRequest
             'email' => [
                 'required', 'unique:users,email,' . request()->route('user')->id
             ],
-            'password' => 'sometimes'
+            'password' => 'sometimes',
         ];
     }
 }

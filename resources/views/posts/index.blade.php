@@ -67,6 +67,8 @@
                           <i class="material-icons">close</i>
                         </button>
                       </form>
+                      <a href="{{ asset('descargar', $post->foto) }}" class="btn btn-dark"> <i
+                          class="material-icons">file_download</i> </a>
                     </td>
                   </tr>
                   @empty

@@ -16,9 +16,7 @@ class UserController extends Controller
     {
         $this->middleware('can:users.index')->only('index'); //especificamos la ruta para para los permisos que tiene
         $this->middleware('can:users.create')->only('create', 'store');
-        $this->middleware('can:users.edit')->only('edit', 'update', 'show'); //solo los autorizados con este permiso podran acceder a estas vistas
-        $this->middleware('can:users.destroy')->only('destroy');
-
+        $this->middleware('can:users.destroy')->only('destroy');//solo los autorizados con este permiso podran acceder a estas vistas
     }
     public function index()
     {
