@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class ArchivoController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +16,7 @@ class ArchivoController extends Controller
      */
     public function index()
     {
-        $archivos = Archivo::all();
+        $archivos = Archivo::paginate(10);
         return view('archivos.index', compact('archivos'));
     }
 
@@ -43,11 +44,11 @@ class ArchivoController extends Controller
             //crear registro en tabla archivos (instancia)
             $archivo = new Archivo();
             $archivo->ruta = $ruta;
-            $archivo->nombre_original = $request->archivo->getClientOriginalName();
+            $archivo->nombre_original = $request->archivo->getClientOriginalName(); //obtener el nombre original
             $archivo->mime = $request->archivo->getMimeType();
             $archivo->save();
         }
-        return redirect()->route('archivo.index');
+        return redirect()->route('archivo.index')->with('mensajeArchivo','Archivo cargado correctamente');;
     }
 
     /**
@@ -69,6 +70,8 @@ class ArchivoController extends Controller
      */
     public function destroy(Archivo $archivo)
     {
-        //
+
+        $archivo->delete();
+        return redirect()->route('archivo.index')->with('mensajeArchivo','Archivo eliminado correctamente');
     }
 }

@@ -55,5 +55,12 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'posts.update'])->syncRoles([$role1, $role2]);
         Permission::create(['name' => 'posts.delete'])->syncRoles([$role1, $role2]);
 
+         //asignando roles para Carga de Archivos
+         Permission::create(['name' => 'archivo.index'])->syncRoles([$role1,$role2]);
+         Permission::create(['name' => 'archivo.create'])->syncRoles([$role1,$role2]);
+         Permission::create(['name' => 'archivo.edit'])->syncRoles([$role1]);
+         Permission::create(['name' => 'archivo.show'])->syncRoles([$role1,$role2]);
+         Permission::create(['name' => 'archivo.update'])->syncRoles([$role1]);
+         Permission::create(['name' => 'archivo.destroy'])->syncRoles([$role1]);
     }
 }

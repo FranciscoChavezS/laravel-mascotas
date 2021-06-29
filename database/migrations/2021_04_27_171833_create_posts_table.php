@@ -22,7 +22,7 @@ class CreatePostsTable extends Migration
             $table->string('raza');
             $table->text('comentario');
             $table->softDeletes();
-            $table->foreignId('user_id')->constrained(); //llave foranea
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade'); //llave foranea
             $table->timestamps();
         });
     }

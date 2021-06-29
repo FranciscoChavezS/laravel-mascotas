@@ -34,8 +34,8 @@
             </li>
             <li class="nav-item{{ $activePage == 'archivos' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('archivo.index') }}">
-                <span class="sidebar-mini"> UM </span>
-                <span class="sidebar-normal"> {{ __('Carga/Descarga') }} </span>
+                <span class="sidebar-mini"> C/D </span>
+                <span class="sidebar-normal"> {{ __('Carga de Archivos') }} </span>
               </a>
             </li>
             <li class="nav-item{{ $activePage == 'posts' ? ' active' : '' }}">

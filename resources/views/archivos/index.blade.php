@@ -6,9 +6,9 @@
     <div class="row">
       <div class="col-md-12">
       <!-- Mostrar mensaje en post-->
-      @if (session('mensajePost'))
+      @if (session('mensajeArchivo'))
                     <div class="alert alert-success" role="success">
-                      {{ session('mensajePost') }}
+                      {{ session('mensajeArchivo') }}
                     </div>
             @endif
          <!--FORMULARIO SUBIR ARCHIVOS--> 
@@ -16,7 +16,7 @@
           @csrf
           <div class="card ">
             <!--Header-->
-            <div class="card-header card-header-success">
+            <div class="card-header card-header-primary">
               <h4 class="card-title">Archivos</h4>
               <p class="card-category">Archivos: Carga/Descarga</p>
             </div>
@@ -24,10 +24,10 @@
             <!--Body-->
             <div class="card-body">
               <div class="row">
-                <label for="foto" class="col-sm-2 col-form-label">Subir archivo</label>
+                <label for="archivo" class="col-sm-2 col-form-label">Subir archivo</label>
                 <div class="col-sm-7">
                   <input type="file" class="form-control" name="archivo"
-                    autocomplete="off"> <!--Validamos que solo acepte archivos tipo imagen png,jpg,jpeg,etc-->
+                    autocomplete="off" required> <!--Validamos que solo acepte archivos tipo imagen png,jpg,jpeg,etc-->
                 </div>
               
             </div>
@@ -35,7 +35,7 @@
 
             <!--Button-->
             <div class="card-footer ml-auto mr-auto">
-              <button type="submit" class="btn btn-dark">Guardar</button>
+              <button type="submit" class="btn btn-facebook">Guardar</button>
             </div>
             <!--End button-->
           </div>
@@ -71,7 +71,16 @@
                     <td class="td-actions text-right">
                       <a href="{{ route('archivo.descargar', $archivo) }}" class="btn btn-info"> <i
                           class="material-icons">file_download</i> </a>
+                    <form action="{{ route('archivo.destroy', $archivo->id) }}" method="post"
+                        onsubmit="return confirm('¿Seguro que deseas eliminar el archivo?')" style="display: inline-block;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" rel="tooltip" class="btn btn-danger">
+                        <i class="material-icons">close</i>
+                        </button>
+                    </form>
                     </td>
+                  
                   </tr>
                   @empty
                   <tr>
@@ -85,7 +94,7 @@
           </div>
           <!--Footer-->
           <div class="card-footer mr-auto">
-            
+            {{ $archivos->links() }}
           </div>
           <!--End footer-->
         </div>
