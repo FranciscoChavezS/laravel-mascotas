@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'donar', 'titlePage' => __('Perfil')])
+@extends('layouts.main', ['activePage' => 'donar', 'titlePage' => __('Donativo')])
 
 @section('content')
 <div class="content">
@@ -7,7 +7,7 @@
       <div class="col-md-8 ml-auto mr-auto">
         <div class="card">
           <div class="card-header card-header-primary">
-            <h4 class="card-title">Sistema de pago PayPal</h4>
+            <h4 class="card-title"><img src="{{ asset('img/PayPal.png')}}" alt="" width="100" ></h4>
             <p class="card-category">Haz un donativo para ayudar a las mascotas que necesitan un hogar.</p>
           </div>
           <div class="card-body">

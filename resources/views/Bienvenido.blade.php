@@ -42,17 +42,17 @@
                 <nav class="navegacion">
                     <a href="#seccion1" class="navegacion__enlace enlace">Objetivo</a>
                     <a href="#seccion2" class="navegacion__enlace enlace">Misión</a>
-                    <a href="contacto.html" class="navegacion__enlace enlace">Proximamnete</a>
+                    <a href="contacto.html" class="navegacion__enlace enlace">Proximamente</a>
                 </nav>
             </div>
         </div>
 
         <div class="header__texto">
-            <h2 class="no-margin">Encontremoslos YA!!</h2>
+            <h2 class="no-margin">Encontremoslo YA!!</h2>
             <p class="no-margin">Rescate y adopción de mascotas</p>
         </div>
-       
     </header>
+
 
     <h2>Objetivo</h2>
     <section class="Partes" id="seccion1">

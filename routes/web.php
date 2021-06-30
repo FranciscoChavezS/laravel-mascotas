@@ -22,9 +22,6 @@ Route::get('/', function () {
 
 //Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/pdf',[App\Http\Controllers\PDFController::class, 'PDF'])->name('descargarPDF');
-Route::get('/paypal/pay',[App\Http\Controllers\PaymentController::class, 'index'])->name('pay');
 
 //proteger lar páginas que no puedan acceder al menú sin log in con middleware auth
 Route::group(['middleware' => 'auth'], function() { 
@@ -39,4 +36,9 @@ Route::group(['middleware' => 'auth'], function() {
     
     Route::resource('archivo', App\Http\Controllers\ArchivoController::class)->except('edit','update');
     Route::get('archivo/descargar/{archivo}', [App\Http\Controllers\ArchivoController::class, 'descargar'])->name('archivo.descargar');
+    
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/pdf',[App\Http\Controllers\PDFController::class, 'PDF'])->name('descargarPDF');
+    Route::get('/paypal/pay',[App\Http\Controllers\PaymentController::class, 'index'])->name('pay');
+
 });
