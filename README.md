@@ -9,7 +9,7 @@ el cual es la desaparición y la busqueda de mascotas extraviadas.
 - Francisco Chávez
 
 ## Intalación con Laravel
-- Clonar el repositorio de github con: __git clone + url del proyecto
+- Clonar el repositorio de github con: __git clone__ + url del proyecto
 - Copiar y pegar el archivo __.env.example__ y cambiarle el nombre por __.env__
 - Crear una base de datos y conectarla en el archivo __.env__
 - Dentro del proyecto ejecutamos el comando __composer install__
