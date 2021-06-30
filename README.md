@@ -19,4 +19,4 @@ el cual es la desaparición y la busqueda de mascotas extraviadas.
 - Ejecutar el comando __npm run dev__
 
 ### Para entrar como administrador
-Iniciar Sesión como username: __admin__ correo: __admin@admin.com__ contraseña:__administrador__
+Iniciar Sesión como administrador utiliza username: __admin__ o correo: __admin@admin.com__ y contraseña:__administrador__
