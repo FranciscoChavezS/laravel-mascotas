@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('verified'); //poder acceder a la ruta si el email está verificado
+       // $this->middleware('verified'); //poder acceder a la ruta si el email está verificado 
     }
 
     /**

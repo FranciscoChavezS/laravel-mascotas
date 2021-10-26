@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INICIO</title>
+    <title>Pet's & Care</title>
 
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"  crossorigin="crossorigin" as="font">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 
     <style>
@@ -17,67 +17,123 @@
 
 </head>
 <body>
-    <div class="nivel1">
-    @if (Route::has('login'))
-            <div class="Separacion">
-                @auth
-                    <a class="Cuadrados" href="{{ url('/home') }}">Perfil</a>
-                @else
-                    <a class="Cuadrados" href="{{ route('login') }}">LOG IN   </a>
-
-                    @if (Route::has('register'))
-                        <a class="Cuadrados" href="{{ route('register') }}">REGISTER</a>
-                    @endif
-                @endauth
+    <div class="container">
+        <div class="row"> 
+            <div class="col-sm-12">
+                <div class="nivel1">
+                        <a class="Logo" href="{{ asset('/') }}">
+                            <img src="{{ asset('img/logo3.png')}}" alt="Logo" width="100" align="left">
+                        </a>
+                        @if (Route::has('login'))
+                                <div class="Separacion">
+                                    @auth
+                                    <a href="{{ url('/home') }}">
+                                        <button type="button" class="btn btn-info btn-lg" >PERFIL</button>
+                                    </a>
+                                    @else
+                                        <a href="{{ route('login') }}">  
+                                            <button type="button" class="btn btn-outline-secondary btn-lg" >LOG IN</button>
+                                        </a>
+                                        @if (Route::has('register'))
+                                            <a  href="{{ route('register') }}">
+                                                <button type="button" class="btn btn-primary btn-lg" >REGISTER</button>
+                                            </a>
+                                        @endif
+                                    @endauth
+                                </div>
+                        @endif
+                </div>
             </div>
-        @endif
+        </div>
     </div>
+
     <header class="header">
         <div class="contenedor">
             <div class="barra">
-                <a class="Logo" href="{{ asset('Bienvenido') }}">
-                    <img src="{{ asset('img/logo3.png')}}" alt="Loigo" width="130">
-                </a>
-
                 <nav class="navegacion">
-                    <a href="#seccion1" class="navegacion__enlace enlace">Objetivo</a>
-                    <a href="#seccion2" class="navegacion__enlace enlace">Misión</a>
-                    <a href="contacto.html" class="navegacion__enlace enlace">Proximamente</a>
+                    <a href="#seccion1" class="navegacion__enlace enlace">MISIÓN</a>
+                    <a href="#seccion2" class="navegacion__enlace enlace">VISIÓN</a>
+                    <a href="#" class="navegacion__enlace enlace">PROXIMAMENTE</a>
                 </nav>
             </div>
-        </div>
-
-        <div class="header__texto">
-            <h2 class="no-margin">Encontremoslo YA!!</h2>
-            <p class="no-margin">Rescate y adopción de mascotas</p>
+            <hr>
         </div>
     </header>
-
-
-    <h2>Objetivo</h2>
-    <section class="Partes" id="seccion1">
-        
-        <div class="Division">
-            <img src="{{ asset('img/WOF.jpg')}}" alt="">
-            <p>Nuestro objetivo principal es el ayudar de una 
-            forma proactiva y participativa a todas las comunidades 
-            en un problema social muy usual, el cual es la desaparición 
-            y la busqueda de un hogar para esos seres que se han convertido 
-            en parte fundamental
-            de nuestras vidas.
-            </p>
+<!--Carousel--->
+<div class="container">
+<div class="row"> 
+    <div class="col-sm-12">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+             <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="{{ asset('img/servicios.png')}}" class="d-block w-100" alt="" width="900px" height="450px">
+            </div>
+            <div class="carousel-item">
+            <img src="{{ asset('img/imagen6.png')}}" class="d-block w-100" alt="" width="900px" height="450px">
+            </div>
+            <div class="carousel-item">
+            <img src="{{ asset('img/imagen11.png')}}" class="d-block w-100" alt="" width="900px" height="450px">
+            </div>
         </div>
-    </section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+        <!--Fin Carousel--->
 
-    <h2>Visión</h2>
-    <section class="Partes" id="seccion2">
-        
-        <div class="Division">
-            <p>Nuestra visión, es crear una comunidad de personas
-            con mismo intereses respecto al cuidado de las mascotas
-            asi como el apoyo mutuo para rescatarlas.</p>
-            <img src="{{ asset('img/4animales.jpg')}}" alt="">
-        </div>  
-    </section>
+            <hr>
+            <br>
+            <section class="Partes" id="seccion1">
+                <div class="Division">
+                    <div class="card mb-3" style="max-width: 750px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                            <img src="{{ asset('img/cat.jpg')}}" class="img-fluid rounded-start" alt="">
+                            </div>
+                            <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Misión</h3>
+                                <p class="card-text">Cuidar y salvaguardar la Salud y el bienestar de los animales para proteger la salud humana.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </section>
+    
+            <br><br>
+                <section class="Partes" id="seccion2">    
+                    <div class="Division">
+                    <div class="card mb-3" style="max-width: 770px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                            <img src="{{ asset('img/dog.jpg')}}" class="img-fluid rounded-start" alt="">
+                            </div>
+                            <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">Visión</h3>
+                                <p class="card-text">Llegar a ser una de las mejores clínicas de medicina veterinaria de la zona.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>  
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

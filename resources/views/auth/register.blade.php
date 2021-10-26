@@ -1,4 +1,4 @@
-@extends('layouts.main', ['class' => 'off-canvas-sidebar', 'activePage' => 'register', 'title' => __('LOSTPET')])
+@extends('layouts.main', ['class' => 'off-canvas-sidebar', 'activePage' => 'register', 'title' => __('PETS & CARE')])
 
 @section('content')
 <div class="container" style="height: auto;">

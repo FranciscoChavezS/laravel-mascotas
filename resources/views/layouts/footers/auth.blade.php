@@ -3,24 +3,24 @@
     <nav class="float-left">
       <ul>
         <li>
-          <a href="https://www.creative-tim.com">
+        <!--   <a href="https://www.creative-tim.com">
               {{ __('Contact Information') }}
-          </a>
+          </a> -->
         </li>
         <li>
-          <a href="https://creative-tim.com/presentation">
+          <!-- <a href="https://creative-tim.com/presentation">
               {{ __('About Us') }}
-          </a>
+          </a> -->
         </li>
         <li>
-          <a href="http://blog.creative-tim.com">
+          <!-- <a href="http://blog.creative-tim.com">
               {{ __('Blog') }}
-          </a>
+          </a> -->
         </li>
         <li>
-          <a href="https://www.creative-tim.com/license">
+          <!-- <a href="https://www.creative-tim.com/license">
               {{ __('Licenses') }}
-          </a>
+          </a> -->
         </li>
       </ul>
     </nav>

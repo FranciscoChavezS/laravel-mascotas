@@ -5,7 +5,7 @@
         body {
             background-image: url('../img/Perrito1.jpg');
             background-repeat: no-repeat;
-             background-size: cover;
+            background-size: cover;
             background-position: center center;
           }
       </style>

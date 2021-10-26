@@ -40,5 +40,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/pdf',[App\Http\Controllers\PDFController::class, 'PDF'])->name('descargarPDF');
     Route::get('/paypal/pay',[App\Http\Controllers\PaymentController::class, 'index'])->name('pay');
-
+    
+    //Rutas para productos 
+    Route::resource('products', App\Http\Controllers\ProductsController::class);
 });

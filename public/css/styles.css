@@ -14,7 +14,7 @@ body{
     font-family: var(--fuenteParrafos);
     font-size: 1.6rem;
     line-height: 2;
-    background-color:#393d46;
+    background-color:#ffffff;
 }
 a{
     text-decoration: none;
@@ -42,12 +42,12 @@ img{
 /**LOGEARSE**/
 .nivel1{
     padding-top: 1rem;
-    background-color: #3C3C44;
+    background-color: #fdfdfd;
     text-align: end;
 }
 .Cuadrados{
     display: block;
-    background-color:yellow;
+    background-color:rgb(35, 213, 245);
     color:black;
     font-size: 1.8rem;
     font-weight: 700;
@@ -57,13 +57,14 @@ img{
     border: none;
 }
 .Cuadrados:hover{
-    background-color: orangered;
+    background-color: #ff0000;
 }
 @media (min-width: 768px){
     .Cuadrados{
         display:inline-block;
     }
 }
+
 /** Globales **/
 .contenedor{
     max-width: 120rem;
@@ -71,13 +72,7 @@ img{
     margin: 0 auto;
 }
 /** Header **/
-.header{
-    background-image: url('../img/login1.jpg');
-    height: 60rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
+
 .header__texto{
     text-align: center;
     color: white;
@@ -112,10 +107,10 @@ img{
     text-align: center;
     font-weight: 700;
     font-size: 1.8rem;
-    color: white;
+    color: rgb(105, 103, 103);
 }
 .enlace:hover{
-    background-color: black;
+    background-color: rgb(35, 213, 245);
 }
 /**Section**/
 .Partes{
