@@ -43,4 +43,6 @@ Route::group(['middleware' => 'auth'], function() {
     
     //Rutas para productos 
     Route::resource('products', App\Http\Controllers\ProductsController::class);
+    Route::get('/shop', [App\Http\Controllers\ShopController::class, 'index'])->name('shop');
+
 });

@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Archivo extends Model
 {
     use HasFactory;
-    protected $fillable = ['nombre_original','rita','mime'];
+    protected $fillable = ['nombre_original','ruta','mime'];
 }

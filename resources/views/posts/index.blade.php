@@ -41,7 +41,7 @@
                   <th> ID </th>
                   <th> Nombre </th>
                   <th> Foto </th>
-                  <th> Ultimo visto </th>
+                  <th> Situación </th>
                   <th> Teléfono </th>
                   <th> Raza </th>
                   <th> Comentario </th>

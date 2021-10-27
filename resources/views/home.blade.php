@@ -11,6 +11,12 @@
       </style>
     <div class="content">
       <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('shop') }}">Shop</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Home</li>
+            </ol>
+        </nav>
       <div class="container-fluid">
         <div class="row">
     @foreach($posts as $post)

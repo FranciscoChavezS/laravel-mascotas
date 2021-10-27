@@ -39,7 +39,7 @@
                 </div>
               </div>
               <div class="row">
-                <label for="fecha" class="col-sm-2 col-form-label">Fecha visto</label>
+                <label for="fecha" class="col-sm-2 col-form-label">Situación</label>
                 <div class="col-sm-7">
                   <input type="date" name="fecha" id="fecha" class="form-control">
                   <!--Validaciones-->

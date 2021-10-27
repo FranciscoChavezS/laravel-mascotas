@@ -44,12 +44,14 @@
                 <p>{{ __('Post') }}</p>
               </a>
             </li>
+            @can('products.index')
             <li class="nav-item{{ $activePage == 'products' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('products.index') }}">
                 <i class="material-icons">store</i>
                 <p>{{ __('Productos') }}</p>
               </a>
             </li>
+            @endcan
           </ul>
         </div>
       </li>

@@ -58,4 +58,5 @@ class PerfilController extends Controller
         $user->update($data);
         return redirect()->route('perfil', $user->id)->with('success', 'Usuario actualizado correctamente');
     }
+    
 }
